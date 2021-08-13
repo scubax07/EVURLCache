@@ -29,6 +29,7 @@
 		BE1ECAD622538E9D00B779B5 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFF79271CCD0A6A0085E6E4 /* Reachability.swift */; };
 		BE1ECAD722538EA000B779B5 /* EVURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F06B2441E38C6FF00925047 /* EVURLProtocol.swift */; };
 		C65B38F18FC73826FCD2A7B6 /* Pods_EVURLCache.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7566676951737F7DE11E9363 /* Pods_EVURLCache.framework */; };
+		E79FA92926C684B300F43FA7 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E79FA92826C684B300F43FA7 /* WebKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +89,7 @@
 		CD76B9911492321A2FCCD8BE /* Pods-EVURLCache.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EVURLCache.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EVURLCache/Pods-EVURLCache.debug.xcconfig"; sourceTree = "<group>"; };
 		D81C12CCF04AF23300938DC5 /* Pods_OSXcompileTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OSXcompileTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC5DD053A55845B5CAE6BBE2 /* Pods-EVURLCache.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EVURLCache.release.xcconfig"; path = "Pods/Target Support Files/Pods-EVURLCache/Pods-EVURLCache.release.xcconfig"; sourceTree = "<group>"; };
+		E79FA92826C684B300F43FA7 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +97,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E79FA92926C684B300F43FA7 /* WebKit.framework in Frameworks */,
 				BE1ECACF22538E7A00B779B5 /* EVURLCache.framework in Frameworks */,
 				C65B38F18FC73826FCD2A7B6 /* Pods_EVURLCache.framework in Frameworks */,
 			);
@@ -121,6 +124,7 @@
 		19413DFDF2B04B13ECBD1B5F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E79FA92826C684B300F43FA7 /* WebKit.framework */,
 				05EE26FC72733C70FFA7F10C /* Pods.framework */,
 				7566676951737F7DE11E9363 /* Pods_EVURLCache.framework */,
 				D81C12CCF04AF23300938DC5 /* Pods_OSXcompileTest.framework */,
@@ -298,7 +302,7 @@
 				TargetAttributes = {
 					7F4A0D4A1BEE481400059923 = {
 						CreatedOnToolsVersion = 7.1;
-						DevelopmentTeam = NFYKDD8CR4;
+						DevelopmentTeam = 7M232DRB6B;
 						LastSwiftMigration = 1120;
 					};
 					7F4E25A91C11A5C6009494A8 = {
@@ -564,7 +568,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -614,7 +618,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -630,10 +634,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				DEVELOPMENT_TEAM = NFYKDD8CR4;
+				DEVELOPMENT_TEAM = 7M232DRB6B;
 				INFOPLIST_FILE = EVURLCache/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.evict.EVURLCache;
+				PRODUCT_BUNDLE_IDENTIFIER = com.evict.EVURLCachee;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 5.0;
@@ -647,10 +651,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				DEVELOPMENT_TEAM = NFYKDD8CR4;
+				DEVELOPMENT_TEAM = 7M232DRB6B;
 				INFOPLIST_FILE = EVURLCache/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.evict.EVURLCache;
+				PRODUCT_BUNDLE_IDENTIFIER = com.evict.EVURLCachee;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 5.0;

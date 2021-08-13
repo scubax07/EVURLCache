@@ -7,31 +7,53 @@
 //
 
 import UIKit
+import WebKit
+class ViewController: UIViewController, WKNavigationDelegate {
 
-class ViewController: UIViewController, UIWebViewDelegate {
-
-    @IBOutlet weak var webView: UIWebView!
+    @IBOutlet weak var webView: WKWebView!
+    var request: URLRequest?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        webView.delegate = self
+        webView.navigationDelegate = self
         //EVURLCache.RECREATE_CACHE_RESPONSE = false // This flag is only used for debuging the small difference between recreating a response and unarchiving a response. Recreating (which is the default) seems to be working best...
         
         
         if let url = URL(string: "https://evict.nl") {
             NSLog("navigating to \(url)")
-            webView.loadRequest(URLRequest(url: url))            
+            webView.load(URLRequest(url: url))
         }
     }
     
-    func webView(_ webView: UIWebView, shouldStartLoadWith request: URLRequest, navigationType: UIWebView.NavigationType) -> Bool {
-        if let redirectURL = EVURLCache.shouldRedirect(request: request) {
-            let r = URLRequest(url: redirectURL)
-            webView.loadRequest(r)
-            return false
-        }
-        return true
+//    func webView(_ webView: UIWebView, shouldStartLoadWith request: URLRequest, navigationType: UIWebView.NavigationType) -> Bool {
+//        if let redirectURL = EVURLCache.shouldRedirect(request: request) {
+//            let r = URLRequest(url: redirectURL)
+//            webView.loadRequest(r)
+//            return false
+//        }
+//        return true
+//    }
+    
+    func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
+//        guard let request = request else { return }
+//        if let redirectURL = EVURLCache.shouldRedirect(request: request) {
+//            let r = URLRequest(url: redirectURL)
+//            webView.load(r)
+//        }
     }
+    
+    func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
+        if let redirectURL = EVURLCache.shouldRedirect(request: navigationAction.request) {
+            let r = URLRequest(url: redirectURL)
+            webView.load(r)
+            return decisionHandler(.cancel)
+        }
+        
+        return decisionHandler(.allow)
+
+    }
+    
+    
     
     
 // Other test url's that were used to debug specific situations
